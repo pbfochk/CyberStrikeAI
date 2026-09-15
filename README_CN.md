@@ -4,7 +4,7 @@
 
 # CyberStrikeAI
 
-[中文](README_CN.md) | [English](README.md)
+[简明版](README.md) | [完整中文说明](README_CN.md)
 
 > **个人源码备份（非上游官方仓库）**：基于 `AIPentest/CyberStrikeAI` 的 2026-09-14 快照，保留原许可证，供已授权环境搭建与二次开发。自动升级脚本已禁用，避免意外覆盖这份源码。
 
