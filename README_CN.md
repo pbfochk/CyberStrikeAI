@@ -6,6 +6,24 @@
 
 [中文](README_CN.md) | [English](README.md)
 
+> **个人源码备份（非上游官方仓库）**：基于 `AIPentest/CyberStrikeAI` 的 2026-09-14 快照，保留原许可证，供已授权环境搭建与二次开发。自动升级脚本已禁用，避免意外覆盖这份源码。
+
+### 这份 GitHub 副本的搭建方法
+
+1. 准备 Go 1.25+、Python 3.10+ 和可访问 Go/Python 包源的网络环境。
+2. 克隆本仓库的 `CyberStrikeAI` 分支并运行启动脚本：
+
+   ```bash
+   git clone -b CyberStrikeAI https://github.com/pbfochk/CyberStrikeAI.git
+   cd CyberStrikeAI
+   ./run.sh
+   ```
+
+3. 等待终端显示 `ONLINE`，按提示打开 Web 地址（默认 `https://127.0.0.1:8080/`，使用本地自签证书）。保存首次生成的 `admin` 密码，登录后立即修改。
+4. 在「系统设置 → 基本设置 → AI 通道配置」填入你自己的模型服务地址、模型和 API Key。配置文件和运行数据保存在本机，不应提交到公开仓库。
+
+`run.sh` 会创建 Python 虚拟环境、安装依赖、构建 Go 服务端并启动。`upgrade.sh` 在本副本中已禁用，不会从上游覆盖源码。生产部署请先阅读[安全加固指南](docs/zh-CN/security-hardening.md)。固定保护版本：`protected-source-2026-09-15`。
+
 **CyberStrikeAI 是 AI 原生网络安全的智能执行中枢——让意图转化为受治理的行动，让证据沉淀为运营记忆，并让每次行动优化下一次行动。**
 
 CyberStrikeAI 将规划、执行、人工监督、证据与复盘连接在同一个可审计工作空间中。项目基于 Go 构建，融合 Eino 智能体、MCP 原生工具、RAG 知识、可视化工作流以及攻击链建模与分析能力，面向已获得明确授权的安全任务。

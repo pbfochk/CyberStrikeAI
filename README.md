@@ -7,6 +7,24 @@
 
 [中文](README_CN.md) | [English](README.md)
 
+> **Personal source backup (not the official upstream repository):** based on the 2026-09-14 snapshot of `AIPentest/CyberStrikeAI`, with the original license retained for authorized deployment and further development. Automatic upgrades are disabled to protect this copy.
+
+### Deploy this GitHub copy
+
+1. Prepare Go 1.25+, Python 3.10+, and network access to Go and Python package sources.
+2. Clone the `CyberStrikeAI` branch of this repository and run the startup script:
+
+   ```bash
+   git clone -b CyberStrikeAI https://github.com/pbfochk/CyberStrikeAI.git
+   cd CyberStrikeAI
+   ./run.sh
+   ```
+
+3. Wait for `ONLINE` in the terminal and open the displayed Web URL (normally `https://127.0.0.1:8080/`, using a local self-signed certificate). Save the initial `admin` password and change it after login.
+4. In **System Settings → Basic Settings → AI Channel Configuration**, enter your own model endpoint, model, and API key. Keep local configuration and runtime data out of the public repository.
+
+`run.sh` creates a Python virtual environment, installs dependencies, builds the Go server, and starts it. `upgrade.sh` is disabled in this copy and cannot overwrite the source from upstream. Read the [hardening guide](docs/en-US/security-hardening.md) before production use. Protected snapshot: `protected-source-2026-09-15`.
+
 **The system of action for AI-native cybersecurity—where intent becomes governed execution, evidence becomes operational memory, and every operation improves the next.**
 
 CyberStrikeAI connects planning, execution, human oversight, evidence, and replay in one auditable workspace. Built in Go, it combines Eino-powered agents, MCP-native tools, RAG knowledge, visual workflows, and attack-chain modeling and analysis for authorized security operations.
